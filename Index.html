@@ -3,67 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>Book Store</title>
+    <link rel="stylesheet" href="index_styles.css">
+
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-        .title{
-          align-items: center;
-        }
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #f4f4f4;
-            padding: 40px 20px;
-            box-shadow: 0 2px 4px rgba(0,0,0,.1);
-        }
-        .header h1 {
-            margin: 0;
-        }
-        .settings-button {
-            padding: 8px 16px;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        .stock-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        .stock-item img {
-            width: 300px;
-            height: 300px;
-            object-fit: cover;
-        }
-        .item-info {
-            flex: 1;
-            padding-left: 20px;
-            padding-left: 20px;
-            position: relative;
-        }
-          .quantity-badge {
-      position: absolute;
-      top: 0;
-      right: 0;
-      background-color: #007bff;
-      color: white;
-      padding: 5px;
-      border-radius: 5px;
+
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>Book Store</h1>
-        <button class="settings-button" onclick="location.href='settings.html'">Account / Settings</button>
-    </div>
+  <header>
+      <div id="logo-container">
+          <a href="Home.html" id="logo">Book Store</a>
+      </div>
+      <div id="user-and-search-container">
+          <div id="user-controls">
+              <button id="account-button" onclick="location.href='login.html'">Account</button>
+              <button id="cart-button" onclick="location.href='cart.html'">Cart</button>
+          </div>
+          <form id="search-form" action="stock.html" method="GET">
+              <input type="text" name="query" id="search-input" placeholder="Search...">
+              <select id="category-select" name="category">
+                  <!-- categories will be populated here -->
+              </select>
+              <button type="submit" id="search-button">Search</button>
+          </form>
+      </div>
+  </header>
+
     <h1>Stock Items</h1>
     <div id="stock-items"></div>
     <script src="app.js"></script>
+
 </body>
 </html>
