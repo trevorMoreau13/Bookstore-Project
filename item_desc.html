@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Item Description - Book Store</title>
+    <link rel="stylesheet" href="item_desc_styles.css">
+
+</head>
+<body>
+  <header>
+      <div id="logo-container">
+          <a href="Home.html" id="logo">Book Store</a>
+      </div>
+      <div id="user-and-search-container">
+          <div id="user-controls">
+              <button id="account-button" onclick="location.href='login.html'">Account</button>
+              <button id="cart-button" onclick="location.href='cart.html'">Cart</button>
+          </div>
+          <form id="search-form" action="stock.html" method="GET">
+              <input type="text" name="query" id="search-input" placeholder="Search...">
+              <select id="category-select" name="category" >
+                  <!-- categories will be populated here -->
+              </select>
+              <button type="submit" id="search-button">Search</button>
+          </form>
+      </div>
+  </header>
+    <main>
+        <div class="item-desc-container">
+            <div class="item-image">
+                <img src="path_to_image.jpg" alt="Item Name">
+            </div>
+            <div class="item-details">
+                <h1>Item Title</h1>
+                <p class="item-description">Item description goes here...</p>
+                <p class="stock-info">Stock Left: <span id="stock-count">0</span></p>
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" value="1" min="1">
+                <button type="button" id="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="item_desc.js"></script>
+
+</body>
+</html>

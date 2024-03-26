@@ -1,0 +1,135 @@
+#cart-items-container {
+    /* Style for the cart container */
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.cart-item {
+    /* Style for each cart item */
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cart-item img {
+    /* Adjust as necessary for your design */
+    width: 80px;
+    height: auto;
+    margin-right: 10px;
+}
+
+#cart-summary {
+    /* Style for the cart summary section */
+    margin: 20px;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+}
+
+#checkout-button {
+    /* Style for the checkout button */
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#new-items {
+    display: flex; /* This will layout the children (stock-item divs) in a row */
+    justify-content: space-between; /* This will space out the items evenly */
+    overflow: hidden; /* This hides any overflow if there are more than three items */
+}
+
+.stock-item {
+    /* Adjust width, margin, etc., as necessary to fit three items */
+    width: calc(33.333% - 10px); /* Example width for three items minus some margin */
+    margin: 0 5px; /* Give some space between items */
+    text-align: center; /* Center the text under the image */
+    right:100;
+}
+
+.stock-item img {
+    width: 100%; /* This will make the image responsive to the size of the .stock-item div */
+    height: auto; /* Keep the aspect ratio of the image */
+}
+#new-items-container {
+    display: flex;
+    justify-content: center; /* Center the items horizontally */
+    align-items: center; /* Align the items vertically */
+    gap: 10px; /* Add some space between the items */
+}
+
+.new-stock-item {
+    flex: 0 0 auto; /* Do not grow or shrink the item, adjust the basis as needed */
+    margin-right: 10px; /* Add some margin if needed */
+}
+.quantity-badge {
+    position: absolute;
+    top: 0;
+    right: -100px; /* Move it 100px to the right */
+    background-color: #007bff;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+#user-and-search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align to the end of the container (right side) */
+    padding: 30px 0px; /* Adjust padding as needed */
+}
+
+#logo-container {
+    /* Adjust styling as needed, ensure it has display block for hyperlink to work */
+    display: block;
+    padding: 10px 20px; /* Adjust padding as needed */
+}
+
+#search-bar {
+    /* Adjust styling as needed */
+    margin-top: 10px; /* Add some space between the user controls and the search bar */
+}
+
+#logo {
+    /* Styles for the logo as a hyperlink */
+    display: inline-block; /* or block depending on your design */
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none; /* Removes underline from links */
+    color: inherit; /* Keeps the text color consistent with non-link text */
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+#search-bar {
+    display: flex;
+}
+#user-controls {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+#search-input {
+    padding: 5px;
+}
+#category-select, #search-button {
+    padding: 5px;
+    margin-left: 5px;
+}
+main {
+    padding: 20px;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+}
+/* Adjust the rest of your CSS to accommodate these changes */

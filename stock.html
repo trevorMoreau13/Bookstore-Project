@@ -1,0 +1,54 @@
+<!-- stock.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="home_styles.css">
+</head>
+<script src="stock.js">
+</script>
+
+<body>
+  <header>
+      <div id="logo-container">
+          <a href="Home.html" id="logo">Book Store</a> <!-- Make sure this points to the homepage -->
+      </div>
+      <div id="user-and-search-container">
+          <div id="user-controls">
+              <button id="account-button" onclick="location.href='login.html'">Account</button>
+              <button id="cart-button" onclick="location.href='cart.html'">Cart</button>
+          </div>
+          <form id="search-form" action="stock.html" method="GET">
+              <input type="text" name="query" id="search-input" placeholder="Search...">
+              <select id="category-select" name="category">
+                  <!-- categories will be populated here -->
+              </select>
+              <button type="submit" id="search-button">Search</button>
+
+<div id="sort-container">
+  <label for="sort-select">Sort by:</label>
+  <select id="sort-select" name="sort" onchange="sortItems(this.value)">
+    <option value="name-asc">Name (A - Z)</option>
+    <option value="name-desc">Name (Z - A)</option>
+    <option value="price-asc">Price (Low to High)</option>
+    <option value="price-desc">Price (High to Low)</option>
+
+  </select>
+
+
+</div>
+
+          </form>
+      </div>
+  </header>
+    <div id="search-results-container">
+        <!-- Search results will be inserted here -->
+    </div>
+    <script>
+
+
+</script>
+
+
+</body>
+
+</html>

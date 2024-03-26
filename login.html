@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Book Store</title>
+    <link rel="stylesheet" href="login_styles.css">
+</head>
+<body>
+
+    <main>
+        <div id="login-container">
+            <h2>Login to Your Account</h2>
+            <form id="login-form" action="/login" method="POST">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit" id="login-button">Login</button>
+            </form>
+            <p>Don't have an account? <a href="register.html">Register here</a>.</p>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Store</title>
+    <link rel="stylesheet" href="home_styles.css">
+
+    <script src="app.js" defer></script>
+</head>
+<body>
+  <header>
+      <div id="logo-container">
+          <a href="Home.html" id="logo">Book Store</a>
+      </div>
+      <div id="user-and-search-container">
+          <div id="user-controls">
+              <button id="account-button" onclick="location.href='login.html'">Account</button>
+              <button id="cart-button" onclick="location.href='cart.html'">Cart</button>
+          </div>
+          <form id="search-form" action="stock.html" method="GET">
+              <input type="text" name="query" id="search-input" placeholder="Search...">
+              <select id="category-select" name="category" >
+                  <!-- categories will be populated here -->
+              </select>
+              <button type="submit" id="search-button">Search</button>
+          </form>
+      </div>
+  </header>
+
+    <main>
+
+      <button id="view-stock-button" onclick="location.href='stock.html'">View Stock</button>
+
+    <!-- New Items Section -->
+    <section id="new-items">
+        <h2>New Items</h2>
+
+        <div id="new-items-container" >
+
+            <!-- Newest items will be inserted here -->
+        </div>
+    </section>
+
+
+</main>
+
+    <footer>
+        <a href="#" id="linkedin-icon">LinkedIn</a>
+        <a href="#" id="instagram-icon">Instagram</a>
+        <a href="#" id="facebook-icon">Facebook</a>
+    </footer>
+</body>
+</html>
