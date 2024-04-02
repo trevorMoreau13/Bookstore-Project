@@ -1,20 +1,19 @@
 <!-- stock.html -->
+<!-- This page is intended to enable the owner to add items and manage the inventory -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <link rel="stylesheet" href="home_styles.css">
 </head>
-<script src="stock.js">
-</script>
 
 <body>
   <header>
       <div id="logo-container">
-          <a href="Home.html" id="logo">Book Store</a> <!-- Make sure this points to the homepage -->
+          <a href="home.html" id="logo">Book Store</a> <!-- Make sure this points to the homepage -->
       </div>
       <div id="user-and-search-container">
           <div id="user-controls">
-              <button id="account-button" onclick="location.href='login.html'">Account</button>
+            <a href="login.html" id="account-link">Account</a>
               <button id="cart-button" onclick="location.href='cart.html'">Cart</button>
           </div>
           <form id="search-form" action="stock.html" method="GET">
@@ -43,11 +42,10 @@
     <div id="search-results-container">
         <!-- Search results will be inserted here -->
     </div>
-    <script>
-
-
-</script>
-
+    <script></script>
+    <script type="module" src="auth.js"></script>
+    <script type="module" src="updateAccountLink.js"></script>
+    <script type="module" src="stock.js"></script>
 
 </body>
 

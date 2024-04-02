@@ -27,6 +27,11 @@
             <p>Already have an account? <a href="login.html">Login here</a>.</p>
         </div>
     </main>
-    <script src="register.js"></script>
+    <script type="module" src="register.js"></script>
+    <script type="module" src="auth.js"></script>
+    <!-- Import the config module first -->
+<script type="module" src="config.js"></script>
+<!-- Then import any module that depends on it -->
+<script type="module" src="dataService.js"></script>
 </body>
 </html>

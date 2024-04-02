@@ -2,12 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Book Store</title>
-    <link rel="stylesheet" href="index_styles.css">
-
-    <style>
-
-    </style>
+    <title>Order Management</title>
+    <link rel="stylesheet" href="orderManagment_styles.css">
 </head>
 <body>
   <header>
@@ -21,22 +17,26 @@
           </div>
           <form id="search-form" action="stock.html" method="GET">
               <input type="text" name="query" id="search-input" placeholder="Search...">
-              <select id="category-select" name="category">
+              <select id="category-select" name="category" >
                   <!-- categories will be populated here -->
               </select>
               <button type="submit" id="search-button">Search</button>
           </form>
       </div>
   </header>
+    <div>
+        <label for="order-id-input">Order ID:</label>
+        <input type="text" id="order-id-input" name="order-id">
+        <button id="check-status-button">Check Status</button>
+    </div>
+    <div id="order-status-display"></div>
+    <div id="orders-container"></div>
 
-    <h1>Stock Items</h1>
-    <div id="stock-items"></div>
-    <script type="module" src="app.js"></script>
-    <script type="module" src="auth.js"></script>
+    <button id="cancel-order-button" style="display:none;">Cancel Order</button>
     <script type="module" src="updateAccountLink.js"></script>
-    <!-- Import the config module first -->
-<script type="module" src="config.js"></script>
-<!-- Then import any module that depends on it -->
-<script type="module" src="dataService.js"></script>
+    <script type="module" src="config.js"></script>
+    <script type="module" src="orderManagment.js"></script>
+    <script type="module" src="auth.js"></script>
+
 </body>
 </html>

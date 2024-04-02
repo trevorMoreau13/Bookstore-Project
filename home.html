@@ -3,11 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Book Store</title>
-    <link rel="stylesheet" href="index_styles.css">
+    <link rel="stylesheet" href="home_styles.css">
 
-    <style>
-
-    </style>
 </head>
 <body>
   <header>
@@ -21,7 +18,7 @@
           </div>
           <form id="search-form" action="stock.html" method="GET">
               <input type="text" name="query" id="search-input" placeholder="Search...">
-              <select id="category-select" name="category">
+              <select id="category-select" name="category" >
                   <!-- categories will be populated here -->
               </select>
               <button type="submit" id="search-button">Search</button>
@@ -29,14 +26,32 @@
       </div>
   </header>
 
-    <h1>Stock Items</h1>
-    <div id="stock-items"></div>
-    <script type="module" src="app.js"></script>
+    <main>
+
+      <button id="view-stock-button" onclick="location.href='stock.html'">View Stock</button>
+
+    <!-- New Items Section -->
+    <section id="new-items">
+        <h2>New Items</h2>
+
+        <div id="new-items-container" >
+
+            <!-- Newest items will be inserted here -->
+        </div>
+    </section>
+
+
+</main>
+
+
+    <!-- Then import any module that depends on it -->
+    <script type="module" src="config.js"></script>
     <script type="module" src="auth.js"></script>
     <script type="module" src="updateAccountLink.js"></script>
+    <script type="module" src="app.js"></script>
     <!-- Import the config module first -->
-<script type="module" src="config.js"></script>
-<!-- Then import any module that depends on it -->
-<script type="module" src="dataService.js"></script>
+
 </body>
+
+    </body>
 </html>

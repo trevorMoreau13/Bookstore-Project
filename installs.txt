@@ -1,0 +1,5 @@
+npm install jsonwebtoken
+
+npm install bcrypt
+
+npm install express bcrypt mssql cors

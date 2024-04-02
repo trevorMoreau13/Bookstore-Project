@@ -1,6 +1,22 @@
+// Import the base URL for the API from the config file.
+import { API_BASE_URL } from './config.js';
 
 let items = []; // This will hold the fetched items globally
 
+window.addEventListener('DOMContentLoaded', (event) => {
+    // Declare variables here
+    const urlParams = new URLSearchParams(window.location.search);
+    let currentSearchQuery = urlParams.get('query') || '';
+    let currentSearchCategory = urlParams.get('category') || '';
+
+    // Use these variables in your fetch call
+    fetch(`${API_BASE_URL}/searchitems?query=${encodeURIComponent(currentSearchQuery)}&category=${encodeURIComponent(currentSearchCategory)}`)
+    .then(response => response.json())
+    .then(items => {
+        displayItems(items);
+    })
+    .catch(error => console.error('Error fetching items:', error));
+});
 
 
 // Displays items in the DOM
@@ -58,20 +74,3 @@ function sortItems(sortCriteria) {
     items = sortedItems;
     displayItems(sortedItems);
 }
-
-
-
-window.addEventListener('DOMContentLoaded', (event) => {
-// Correctly retrieve URL parameters and store them in global variables
-const urlParams = new URLSearchParams(window.location.search);
-currentSearchQuery = urlParams.get('query') || '';
-currentSearchCategory = urlParams.get('category') || '';
-
-// Use these global variables in your fetch call
-fetch(`http://localhost:3000/api/searchitems?query=${encodeURIComponent(currentSearchQuery)}&category=${encodeURIComponent(currentSearchCategory)}`)
-.then(response => response.json())
-.then(items => {
-    displayItems(items);
-})
-.catch(error => console.error('Error fetching items:', error));
-});

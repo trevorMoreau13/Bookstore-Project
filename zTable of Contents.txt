@@ -1,0 +1,49 @@
+					Code Files For Web App:
+---------------------------------------------------------------------------------------------------------------------
+app.js				Manages fetching and display of stock items from the API.
+auth.js				Handles user authentication and UI updates for login status.
+cart.html			The HTML structure for the shopping cart page.
+cart.js				JavaScript for cart management, such as item addition and removal.
+cart_styles.css			CSS styles for the shopping cart page.
+checkout.html			The HTML structure for the checkout page.
+checkout.js			JavaScript for handling the checkout process and transactions.
+checkout_styles.css		CSS styles for the checkout page.
+config.js			Configuration file storing API base URL to centralize the URL.
+Home.html			The homepage HTML, featuring navigation and stock items.
+home_styles.css			CSS styles for the homepage.
+Index.html			The main landing page HTML, linking to various site sections.
+index_styles.css		CSS styles for the index page.
+installs.txt			List of installation commands used.
+item_desc.html			HTML for the item details page.
+item_desc.js			JavaScript for displaying item details and cart interactions.
+item_desc_styles.css		CSS styles for the item description page.
+login.html			HTML for the login page.
+login.js			JavaScript for handling the login process.
+login_styles.css		CSS styles for the login page.
+orderManagment.html		HTML for the order management page.
+orderManagment.js		JavaScript for managing and viewing order statuses.
+orderManagment_Styles.css	CSS styles for the order management page.
+register.html			HTML for the user registration page.
+register.js			JavaScript for handling new user registrations.
+register_styles.css		CSS styles for the registration page.
+server.js			Node.js server code with Express framework and SQL interactions.
+stock.html			HTML for stock management, including inventory additions.
+stock.js			JavaScript for front-end stock item display and sorting.
+updateAccountLink.js		JavaScript to update account links based on login status.
+user_page.html			The HTML structure for the user's personal page.
+user_page.js			JavaScript for user-specific interactions like logout.
+
+
+					Other Files
+---------------------------------------------------------------------------------------------------------------------
+BookStore.bak			A complete backup of the working database in production.
+Documentation.docx		Provides a breif overview of the main functions as proof of a working product.
+Test.png			An image file used to test an image being loaded properly.
+
+					Notes:
+---------------------------------------------------------------------------------------------------------------------
+To allow this to work on your device you will have to change the following information in server.js to match you MSSQL server instance.   
+    user: 'test',
+    password: 'password',
+    server: 'WIN-LQPGKRTIAF1\\SCHOOLWORK', // Update as per your SQL server instance
+    database: 'BookStore',
